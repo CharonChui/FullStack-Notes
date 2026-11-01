@@ -36,6 +36,49 @@ DOMAINS = [
     ("Server", "服务端", "Server", "Java / 数据库 / 中间件 / 运维（规划中）", "🗄️"),
 ]
 
+# 自动发现额外技术域：根目录下未被上面声明、但确实含有 .md 的目录，
+# 会自动补充为一个技术域，这样以后新增 Python/、Rust/ 等顶层目录无需改脚本。
+_ROOT_SKIP = {"scripts", "docs", "node_modules", "assets"}
+_MANUAL_DOMAINS = list(DOMAINS)
+
+
+def _discover_domains():
+    known = {d[0] for d in _MANUAL_DOMAINS}
+    try:
+        entries = sorted(os.listdir(ROOT))
+    except OSError:
+        return list(_MANUAL_DOMAINS)
+
+    found = []
+    for name in entries:
+        if name in known or name in _ROOT_SKIP or name.startswith("."):
+            continue
+        path = os.path.join(ROOT, name)
+        if not os.path.isdir(path):
+            continue
+        if not any(f.endswith(".md") for _, _, fs in os.walk(path) for f in fs):
+            continue
+        # 用该目录 README.md 的一级标题作为显示名，取不到就退化为目录名
+        label = name
+        readme = os.path.join(path, "README.md")
+        if os.path.isfile(readme):
+            try:
+                with open(readme, encoding="utf-8", errors="ignore") as fh:
+                    for line in fh:
+                        s = line.strip()
+                        if s.startswith("# "):
+                            label = s[2:].strip() or name
+                            break
+                        if s and not s.startswith("#"):
+                            break
+            except OSError:
+                pass
+        found.append((name, label, name, f"{label} 相关笔记", "📄"))
+    return list(_MANUAL_DOMAINS) + found
+
+
+DOMAINS = _discover_domains()
+
 ANDROID_ORDER = [
     "BasicKnowledge", "AdavancedPart", "SourceAnalysis", "VideoDevelopment",
     "Jetpack", "KotlinCourse", "Dagger2", "ImageLoaderLibrary", "RxJavaPart",
