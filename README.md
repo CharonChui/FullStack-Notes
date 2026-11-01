@@ -19,6 +19,23 @@
 
 ---
 
+在线浏览
+---
+
+站点地址：**<https://charonchui.github.io/FullStack-Notes/>**
+
+所有笔记会被预渲染成静态站点，支持全站搜索、按目录浏览、深浅色主题与移动端适配。推送到 `master` 后由 GitHub Actions 自动构建发布。
+
+本地预览：
+
+```bash
+pip3 install --user markdown
+python3 scripts/build_site.py          # 生成到 docs/
+python3 -m http.server 8000 -d docs    # 打开 http://localhost:8000
+```
+
+---
+
 一、Android（移动端）
 ---
 

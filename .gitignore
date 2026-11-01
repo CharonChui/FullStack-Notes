@@ -1,3 +1,6 @@
 /.project
 /.DS_Store
 /.idea
+
+# 站点构建产物（由 scripts/build_site.py 生成，CI 每次推送自动重建）
+/docs/
