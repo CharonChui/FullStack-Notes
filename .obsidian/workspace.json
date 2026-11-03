@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ad79ba9f9828c887",
+        "id": "5d6b26789bd2899d",
         "type": "tabs",
         "children": [
           {
-            "id": "254b14114e772d27",
+            "id": "9a8ae49249c14a1d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Flutter/09-鸿蒙平台开发.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "09-鸿蒙平台开发"
+              "title": "新标签页"
             }
           }
         ]
@@ -189,8 +185,22 @@
       "bases:新建数据库": false
     }
   },
-  "active": "254b14114e772d27",
+  "active": "9a8ae49249c14a1d",
   "lastOpenFiles": [
+    "全栈简介.md",
+    "2. Docker.md",
+    "3.Kubernetes.md",
+    "Fe/1. HTML与CSS.md",
+    "Fe/README.md",
+    "Fe/3.React.md",
+    "1. Nginx.md",
+    "Fe/4. Node.js.md",
+    "Fe/2. JavaScript和TypeScript.md",
+    "pics/Pasted image 20261102210108.png",
+    "4. CI&CD.md",
+    "pics/Pasted image 20261102200950.png",
+    "pics/Pasted image 20261102200912.png",
+    "pics",
     "Flutter/10-多端适配问题与解决.md",
     "Flutter/12-工程化测试与FAQ.md",
     "Flutter/11-性能问题与优化.md",
@@ -208,24 +218,13 @@
     "未命名 3.base",
     "2026-09-06.md",
     "未命名 2.canvas",
-    "未命名.md",
     "MobileAIModel/1.大模型概念介绍.md",
-    "未命名",
     "未命名 2.base",
     "未命名 1.base",
     "未命名 1.canvas",
     "MobileAIModel/9.Transformer架构.md",
     "MobileAIModel/8.NLP自然语言.md",
     "MobileAIModel/AIAgent/docs/1/03-第三章-大语言模型基础.md",
-    "MobileAIModel/AIAgent/docs/1/02-第二章-智能体发展史.md",
-    "MobileAIModel/2.模型训练及微调.md",
-    "MobileAIModel/AIAgent/14.多Agent.md",
-    "MobileAIModel/AIAgent/13.上下文压缩.md",
-    "MobileAIModel/AIAgent/12.LangGraph.md",
-    "MobileAIModel/AIAgent/10.文本分类意图识别.md",
-    "MobileAIModel/AIAgent/8.上下文功能.md",
-    "MobileAIModel/AIAgent/7.向量数据库.md",
-    "MobileAIModel/AIAgent/6.LangChain.md",
     "未命名.canvas",
     "未命名.base"
   ]
